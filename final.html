@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SS2864 GROUP PRESENTATION</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ngunyi Fossungu" />
+    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide
+background-image: url("CREDIT CARD APPROVALSw.gif")
+background-size: cover
+
+&lt;style type="text/css"&gt;
+  @import url('https://fonts.googleapis.com/css2?family=Sora&amp;display=swap');
+
+
+.remark-slide-content {
+  color: #black;
+  background-color: #96deff;
+  font-size: 24px;
+} 
+.remark-code{
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: #333;
+  background: #f8f8f8;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Sora';}
+h1 { 
+  color: #3939ed}
+h2 { 
+  color: #e00798;
+  text-decoration: underline}
+h3 { 
+  color: #e00798}
+slides &gt; slide.title-slide {
+  text-align: left;
+  color: #121212;
+  font-weight: bold;
+  font-size: 16pt}
+
+
+&lt;/style&gt;
+
+
+
+
+
+---
+class: animated, slideInUp
+
+# ABOUT OUR DATA
+
+There are 16 variables: Approval is the response variable
+
+&lt;img src="datapic.png" width="3416" /&gt;
+
+### Disclaimers
+- We don't have any information on the bank or the location that the data was collected from
+- The data most likely includes people applying for different types of credit cards
+- We will be omitting the 'ZipCode' variable from our analysis
+---
+class: middle, center, animated, slideInUp
+background-color: hotpink
+
+# OUR GOAL
+
+**Which factors affect your credit card approval? Do numerical factors or categorical factors influence approval more?**
+
+---
+class: center, animated, slideInUp
+## Variables 
+.panelset[
+.panel[.panel-name[Categorical]
+
+&lt;img src="final_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Binary]
+
+&lt;img src="final_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Numerical]
+
+&lt;img src="final_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+]
+]
+---
+class: middle, center, animated, slideInUp
+
+# MAIN ANALYSIS
+---
+class:  middle, animated, slideInUp
+# Industry, Ethnicity, and Income Analysis
+---
+class: animated, slideInUp
+## Industry 
+&lt;img src="final_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+## Ethnicity
+&lt;img src="final_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+## Income
+&lt;img src="final_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+
+# Debt, Employed, Prior Default, and Bank Customer Analysis
+### Quick Definition of Variables
+
+*Employed:* Employed Status during the credit card application process
+
+*Bank Account:* Does the person have a bank account at the time of applying
+
+*Debt:* Outstanding Debt (not specified what kind or unit)
+
+*Prior Default:* Closing of a credit account due to not paying it
+---
+class: animated, slideInUp
+### Cleaning Dataset
+Changed all the binary variables to factors with appropriate names
+
+&lt;img src="Picture1.png" width="832" /&gt;
+---
+class: animated, slideInUp
+### Quick Summary of Variables
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   1.000   2.750   4.759   7.207  28.000
+```
+
+```
+## Unemployed   Employed 
+##        395        295
+```
+
+```
+## Yes  No 
+## 329 361
+```
+
+```
+## Yes  No 
+## 163 527
+```
+---
+class: middle, center, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: middle, center, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: middle, center, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: middle, center, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+## Analysis
+- Prior Defaults and Employed Status make sense logically…
+ - If you failed to pay for a credit card before you are more of a liability 
+ - If you are employed you have income to pay credit debt
+- Bank Customer and Debt gave opposite results to what we thought
+ - If you have less debt you should be less of a liability for credit card companies
+ - Having a bank history shows a good relationship with the banks (could be the ones approving the cards)
+---
+class: middle, animated, slideInUp
+
+#Why is this the case?
+
+Let’s try looking at the relationship between these variables and a logically sound variable (prior defaults)
+---
+class: middle, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+## Analysis
+- From this we can see that (in this sample at least) the only proportion with more prior defaults is in the low debt group. 
+- It is possible that these low levels of debt could come from defaulting on a credit card. Thus, lowering the acceptance rate of the low level debt group. 
+- Using the logic from before, explains why high level debt customers don't have a significantly positive approval rate 
+- If this is true we would be able to see more approvals with customers that have no prior defaults and a low level of debt
+---
+class: animated, slideInUp
+### Filtered Results
+
+.pull-left[
+Use tidyverse to filter data
+
+```r
+# Proof
+y &lt;- credit %&gt;%
+  filter(Debt == "Low") %&gt;%
+  filter(PriorDefault == "No")
+```
+]
+.pull-right[
+![](final_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+]
+---
+class: middle, animated, slideInUp
+## Bank Customer Theory
+- Similarly what if the reason why bank customers have a worse approval rate is because they make more financial transactions, thus giving them more chances to have a prior default. 
+- So to confirm this, bank customers without prior defaults should have a much better ratio of credit card approval.
+---
+class: middle, animated, slideInUp
+&lt;img src="final_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+##To Conclude...
+- Being employed increases your chances of getting approved for a credit card 
+- Having Prior Defaults significantly decreases your chance of getting approved
+- Lower levels of debt and being a bank customer are advantageous for approval as long as you do not have any prior defaults.
+---
+class: middle, animated, slideInUp
+# Age, Married, Gender, and Citizen Analysis 
+---
+class: animated, slideInUp
+
+&lt;img src="ss.png" width="1507" /&gt;
+---
+class: animated, slideInUp
+## Age
+&lt;img src="s1.png" width="1941" /&gt;
+---
+class: animated, slideInUp
+![](final_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+
+
+
+```
+##           
+##              Approved Not Approved
+##   30-50    0.17391304   0.18405797
+##   Over 50  0.05217391   0.03333333
+##   Under 30 0.21884058   0.33768116
+```
+
+---
+class: animated, slideInUp
+## Married 
+&lt;img src="s2.png" width="1949" /&gt;&lt;img src="s3.png" width="1941" /&gt;
+---
+class: animated, slideInUp
+
+```
+##          
+##            Approved Not Approved
+##   single  0.2848485    0.7151515
+##   married 0.4952381    0.5047619
+```
+
+![](final_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+---
+class: animated, slideInUp
+## Gender
+&lt;img src="s4.png" width="1947" /&gt;&lt;img src="s5.png" width="1941" /&gt;
+---
+class: animated, slideInUp
+
+```
+##         
+##           Approved Not Approved
+##   Male   0.4354167    0.5645833
+##   Female 0.4666667    0.5333333
+```
+
+![](final_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+---
+class: animated, slideInUp
+## Citizen 
+&lt;img src="s6.png" width="1944" /&gt;&lt;img src="s7.png" width="1941" /&gt;
+---
+class: animated, slideInUp
+
+```
+##               
+##                 Approved Not Approved
+##   ByBirth      0.4592000    0.5408000
+##   ByOtherMeans 0.2631579    0.7368421
+##   Temporary    0.6250000    0.3750000
+```
+
+![](final_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+---
+class: middle, animated, slideInUp
+# YearsEmployed, Credit score, and DriversLicense Analysis
+---
+class: center, animated, slideInUp
+## YearsEmployed
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   0.165   1.000   2.223   2.625  28.500
+```
+
+![](final_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
+---
+class: animated, slideInUp
+
+```r
+# using hypothesis test to check the significant of yearsEmployed
+# null hypothesis coefficents is 0
+lmod &lt;-  glm(Approved~YearsEmployed, data = df,  family = "binomial")
+summary(lmod)
+```
+
+```
+## 
+## Call:
+## glm(formula = Approved ~ YearsEmployed, family = "binomial", 
+##     data = df)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.4955  -0.9192  -0.8681   1.2186   1.5222  
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -0.78170    0.10385  -7.527 5.19e-14 ***
+## YearsEmployed  0.27747    0.03725   7.449 9.44e-14 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 948.16  on 689  degrees of freedom
+## Residual deviance: 863.32  on 688  degrees of freedom
+## AIC: 867.32
+## 
+## Number of Fisher Scoring iterations: 4
+```
+---
+class: animated, slideInUp
+## CreditScore
+
+```r
+# Analysis Credit score
+ggplot(df, aes(Approved, y = CreditScore, fill= Approved))+
+  geom_boxplot(alpha = 0.6)+
+  scale_fill_brewer(palette="OrRd")
+```
+
+![](final_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+---
+class: animated, slideInUp
+
+```r
+# Again, using hypothesis test to check the significant.
+lmod &lt;-  glm(Approved~CreditScore, data = df,  family = "binomial")
+summary(lmod)
+```
+
+```
+## 
+## Call:
+## glm(formula = Approved ~ CreditScore, family = "binomial", data = df)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -3.7444  -0.8167  -0.8167   0.9127   1.5876  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -0.92675    0.10036  -9.234   &lt;2e-16 ***
+## CreditScore  0.39680    0.04188   9.474   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 948.16  on 689  degrees of freedom
+## Residual deviance: 762.74  on 688  degrees of freedom
+## AIC: 766.74
+## 
+## Number of Fisher Scoring iterations: 6
+```
+---
+class: animated, slideInUp
+## DriversLicense
+&lt;img src="final_files/figure-html/unnamed-chunk-37-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: animated, slideInUp
+
+```r
+lmod &lt;-  glm(Approved~DriversLicense, data = df,  family = "binomial")
+summary(lmod)
+```
+
+```
+## 
+## Call:
+## glm(formula = Approved ~ DriversLicense, family = "binomial", 
+##     data = df)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -1.113  -1.061  -1.061   1.243   1.298  
+## 
+## Coefficients:
+##                   Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)        -0.2799     0.1044  -2.680  0.00736 **
+## DriversLicenseYes   0.1277     0.1537   0.831  0.40621   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 948.16  on 689  degrees of freedom
+## Residual deviance: 947.47  on 688  degrees of freedom
+## AIC: 951.47
+## 
+## Number of Fisher Scoring iterations: 3
+```
+---
+class: animated, slideInUp
+##Logistic Model
+
+```r
+# fit a full model with all main effects
+fullmod &lt;- glm(Approved~., data = df, family = "binomial")
+step(fullmod, direction = "backward", trace = 0)
+```
+
+```
+## 
+## Call:  glm(formula = Approved ~ Married + BankCustomer + Ethnicity + 
+##     PriorDefault + Employed + CreditScore + Citizen + Income, 
+##     family = "binomial", data = df)
+## 
+## Coefficients:
+##         (Intercept)             Married1        BankCustomer1  
+##          -4.515e+00           -1.880e+01            1.951e+01  
+##      EthnicityBlack      EthnicityLatino       EthnicityOther  
+##           1.131e+00           -1.059e+00            1.181e+00  
+##      EthnicityWhite        PriorDefault1            Employed1  
+##           6.176e-01            3.658e+00            7.528e-01  
+##         CreditScore  CitizenByOtherMeans     CitizenTemporary  
+##           1.153e-01            7.354e-02            3.482e+00  
+##              Income  
+##           5.445e-04  
+## 
+## Degrees of Freedom: 689 Total (i.e. Null);  677 Residual
+## Null Deviance:	    948.2 
+## Residual Deviance: 428.7 	AIC: 454.7
+```
+---
+class: middle, animated, slideInUp
+##Conclusion
+Married, BankCustomer, Ethnicity, PriorDefault, Employed, CreditScore, Citizen, and Income have significant relationships with the response.
+---
+class: animated, slideInUp
+background-color: white
+
+## REFERENCES
+
+https://www.kaggle.com/datasets/samuelcortinhas/credit-card-approval-clean-data?select=clean_dataset.csv
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": true,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
